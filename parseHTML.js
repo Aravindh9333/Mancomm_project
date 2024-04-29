@@ -13,8 +13,6 @@ async function downloadHtml() {
 }
 
 // Step 2: Choose a Parsing Approach (DOM vs. SAX)
-// For this task, let's use a DOM parser since the document size is reasonable and the structure is hierarchical.
-
 // Step 3: Extract Content
 function extractContent(html) {
     const root = parse(html);
@@ -40,7 +38,6 @@ function extractContent(html) {
                 paragraphs.push(paragraph);
             });
             console.log(paragraphs);
-            // Construct subsection object
             const subsection = {
                 title: subsectionTitle,
                 paragraphs: paragraphs
@@ -66,11 +63,7 @@ function extractContent(html) {
 
 
 // Step 4: Design Comprehensive Solution
-// The solution provides a structured representation of the HTML content, including titles, subsections, and paragraphs.
-
 // Step 5: Justify Parsing Approach
-// DOM parsing is suitable for this task since the document is not excessively large, and the hierarchical structure makes it easier to traverse.
-
 // Main function to orchestrate the process
 async function main() {
     const html = await downloadHtml();
